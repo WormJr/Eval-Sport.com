@@ -1,0 +1,368 @@
+/* intégration de la police d'écriture demandé pour le projet */
+
+@font-face {
+    font-family: 'Liberation';
+    src: url(/fonts/LiberationSans-Regular-webfont.ttf);
+    src: url(/fonts/LiberationSans-Bold-webfont.ttf);
+}
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    color: #1C1C1C;
+    text-decoration: none;
+}
+
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Liberation', sans-serif;
+}
+
+footer {
+    font-family: 'Liberation', sans-serif;
+}
+
+main {
+    margin-top: 35px;
+}
+
+hr {
+
+    height: 3px;
+    border: 0px;
+    background-color: gray;
+    margin-top: 30px;
+
+
+}
+
+.gabarit {
+    width: 80%;
+    margin: auto;
+}
+
+
+.align-horiz {
+    display: flex;
+}
+
+
+
+/* Couleurs que l'on va réutiliser tout au long du code*/
+
+.text-yellow {
+    color: #EA9F05;
+}
+
+.back-color-main {
+    background-color: #1C1C1C;
+}
+
+.back-article-color {
+    background-color: #F3F3F3;
+}
+
+.footer-color {
+    background-color: #373737;
+}
+
+
+
+
+/* Header */
+
+#header-img {
+    background-image: url(../images/background.jpg);
+
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    font-weight: 700;
+}
+
+header:first-of-type p {
+    font-size: 1.5rem;
+}
+
+#div-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#div-header img {
+    width: 300px;
+}
+
+#div-header p {
+    align-items: stretch;
+}
+
+#div-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#div-nav h2 {
+    align-items: flex-start;
+}
+
+#div-nav ul {
+    display: flex;
+}
+
+#div-nav li {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* Main */
+
+main img {
+    width: 100%;
+}
+
+/* article gant de boxe */
+
+#main-section {
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+article {
+    width: 500px;
+    margin: 0 auto 80px;
+    max-width: 1000px;
+    position: relative;
+}
+
+article img {
+    width: 500px;
+    height: 500px;
+}
+
+.reduc {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    color: #EA9F05;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: -30px;
+}
+
+.legende-img {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+}
+
+.old-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EA9F05;
+}
+
+.under-article {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+article p {
+    width: 100px;
+    background-color: black;
+    color: #F3F3F3;
+    padding: 5px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+/* FOOTER */
+
+#footer-div {
+    position: absolute;
+}
+
+#footer-nav {
+    position: absolute;
+    top: -20px;
+    left: 25%;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#footer-nav ul {
+    padding: 10px;
+    bottom: -20px;
+    left: 30%;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+#footer-nav li {
+    align-self: center;
+
+}
+
+figure img {
+    width: 50px;
+    height: 50px;
+
+}
+
+#footer-section {
+    padding: 50px;
+    justify-content: space-between;
+}
+
+#footer-section li {
+    text-align: center;
+}
+
+#footer-section p {
+    color: white;
+    padding-top: 5px;
+}
+
+#social-media {
+    padding: 10px;
+    justify-content: center;
+}
+
+#social-media li {
+    margin: 30px;
+}
+
+#footer-section p:last-of-type {
+    text-align: center;
+}
+
+/* La partie responsive du projet avec une largeur max de 576 px */
+
+@media only screen and (max-width : 768px) {
+
+    .gabarit {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* Toute la partie responsive du header */
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #div-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #div-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #div-nav ul {
+        justify-content: space-between;
+    }
+
+    #div-nav li {
+        font-size: 1rem;
+    }
+
+    /* Toute la partie des articles */
+
+    #main-section {
+        width: 80%;
+        margin: auto;
+    }
+
+    article {
+        text-align: center;
+    }
+
+    article img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .under-article {
+        justify-content: space-evenly;
+    }
+
+    .reduc {
+        top: 5%;
+        right: 15%;
+    }
+
+
+    /* Toute la partie responsive du footer */
+
+
+    #footer-div {
+        width: 100%;
+    }
+
+    #footer-nav {
+        width: 80%;
+        left: 10%;
+    }
+
+
+    #footer-section ul:first-of-type {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 65px;
+        justify-content: center;
+    }
+
+
+    #footer-section li {
+        width: 200px;
+    }
+}
